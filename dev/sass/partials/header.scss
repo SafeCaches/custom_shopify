@@ -1,0 +1,167 @@
+@import '../variables';
+@import '../mixins';
+
+
+.logo {
+	cursor: pointer;
+}
+
+div#menu {
+	background: $black;
+	color: white;
+	font-family: $baba;
+	font-size: 1.2em;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 0;
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+	}
+	nav.desktop-wrapper {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		ul {
+			text-align: center;
+			padding: 2.5em 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			li {
+				display: inline-block;
+				&:after {
+					content: '|';
+				}
+				a {
+					transition: all .2s;
+					padding: 0 .5em;
+					letter-spacing: .75px;
+				}
+				a:hover {
+					color: $yellow;
+				}
+				&:last-of-type:after {
+					display: none;
+				}
+			}
+		}
+		.buy {
+			flex: .65;
+			text-align: right;
+			padding: 2.2em 0;
+			a.btn {
+				border: 2px $yellow solid;
+				background: $black;
+				min-width: auto;
+				color: white;
+				padding:.3em .75em .2em;
+				font-size: inherit;
+				transition: all .2s;
+				&:hover {
+					background: $yellow;
+					color: $black;
+				}
+			}
+		}
+		@include large {
+			.logo {
+				padding: 2em 0;
+			}
+			.buy {
+				flex: 1;
+			}
+		}
+	}
+	nav.mobile-wrapper {
+		display: none;
+	}
+}
+
+
+//MOBILE MENU
+@include small {
+	div#menu {
+		//HIDE DESKTOP MENU
+		nav.desktop-wrapper {display: none;}
+		nav.mobile-wrapper {
+			display: flex;
+			flex-direction: column;
+			.logo {
+				background-repeat: no-repeat;
+				width: 100%;
+				max-height: 25px;
+    			background-position: center;
+				margin: .5em 0;
+			    padding: 1.5em;
+				flex: 0;
+			}
+			.links-wrapper {
+				max-height: 0;
+				overflow: hidden;
+				flex: 1;
+				display: flex;
+				opacity: 0;
+				transition: opacity .25s;
+				ul {
+					display: block;
+					opacity: 0;
+					text-align: center;
+					width: 100%;
+				}
+			}
+		}
+		.lines {
+			height: 16px;
+			overflow: hidden;
+			width: 20px;
+			position: absolute;
+			right: 0;
+			top: 15px;
+			cursor: pointer;
+			.line {
+				width: 20px;
+				height: 2px;
+				background: white;
+				transition: all .2s;
+				&.line-2 {
+					margin: 5px 0;
+				}
+			}
+		}
+	}
+	div#menu.is-open {
+		min-height: 100vh;
+		overflow: scroll;
+		nav.mobile-wrapper {
+			min-height: 100vh;
+			.links-wrapper {
+				max-height: 1000px;
+				opacity: 1;
+				ul {
+					font-size: 1.75em;
+					opacity: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+				}
+			}
+		}
+		.lines {
+			width: 20px;
+			height: 20px;
+			transform: rotate(-45deg);
+			.line-1 {
+				transform: translateY(9px) rotate(90deg);
+			}
+			.line-2 {
+				opacity: 0;
+			}
+			.line-3 {
+				transform: translateY(-5px)
+			}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+@import '../variables';
+@import '../mixins';
+
+ #drinking-rules {
+	// .row {
+	// 	width: 62%;
+	// 	@include mobile {
+	// 		width: 82%;
+	// 	}
+	p {
+	 		justify-content: center;
+	 		text-align: justify;
+	 	}
+	// }
+	section.holder {
+	    // width: 48%;
+	    // padding: 0 0 30.725%;
+	    .card-vert {
+		   	.front {
+                display: flex;
+                flex-direction: column;
+				background: $dkred;
+				border: 0px solid $black;
+				svg, path {
+					fill: black;
+				}
+				// h3, svg {
+				// 	text-align: left;
+				//     text-indent: 1rem;
+				// 	flex: 1;
+				// }
+		   	}
+		    .back {
+			// span, {
+			// 		p {
+			// 			font-size: 0.8em;
+			// 			text-align: justify;
+			// 		}
+			// 		}
+            //
+			border: 2px solid $dkred;
+			svg, path {
+	    	    	fill: $dkred !important;
+				}
+				}
+
+				//border-radius: 18px;
+				//border: 2px solid $red;
+				//background: white;
+				//color: $black !important;
+				//transform: rotateY( 180deg );
+				//justify-content: center;
+				//align-items: center;
+				//padding: 15px;
+				//span, {
+				//	p {
+				//		font-size: 0.9em;
+				//		text-align: justify;
+				//	}
+				//	flex: 1;
+				//	max-height: 70%;}
+   			//svg, path {
+	    	//  	fill: $red !important;
+
+	    	    //border: 2px solid $red;
+	    	    //span, p {
+	    	    //text-align: justify;
+	    	    //flex: 1;
+	    	    //}
+	    	    //svg, path {
+	    	    //	fill: $red !important;
+
+	    	    // flex-direction: row;
+	    	    // align-items: center;
+	    	    // @include tablet {
+	    	    // 	flex-direction: column;
+	    	    // }
+	    	    //}
+		    //}
+	    }
+	}
+}
+
+	// @include tablet {
+	// 	section.holder {
+	// 	    width: 98%;
+	// 	    padding: 0px 0 136.08791304%;
+	// 	}
+	// }
+
+// #drinking-rules {
+// 	a.btn {
+// 		text-align: center;
+// 		margin: 1em 0;
+// 	}
+// 	a.print {
+// 		position: absolute;
+// 		top: -130px;
+// 		right: 0;
+// 		width: 42px;
+// 	}
+// 	.row {
+// 		flex-wrap: wrap;
+// 		justify-content: flex-start;
+// 		position: relative;
+// 		width: 92%;
+// 	}
+// 	section.holder {
+// 		position: relative;
+// 		color: white;
+// 		flex: 1 1 46%;
+// 		margin: 2%;
+// 		padding: 0px 0 30.76%;
+// 		max-height: 0;
+// 		background: $dkred;
+// 		border-radius: 18px;
+// 		@include mobile {
+// 			flex: 1 1 100%;
+// 			padding: 0 0 156.0384%;
+// 		}
+// 		 .card {
+// 		 	display: flex;
+// 		 	position: absolute;
+// 		     height: 100%;
+// 		     width: 100%;
+// 		 	div.title-icon, div.content {
+// 		 		display: flex;
+// 		 		flex-direction: column;
+// 		 		justify-content: center;
+// 		 	    padding: 5%;
+// 		 	}
+// 		 	.title-icon {
+// 		 		flex: 1.25;
+// 		 		align-items: center;
+// 		 		text-align: center;
+// 		 	}
+// 		 	.content {
+// 		 		flex: 2;
+// 		 		align-items: flex-start;
+// 		 	}
+// 		 	svg {
+// 		 		height: 100px;
+// 		 		fill: #030104;
+// 		 		margin: 0 0 1.5em;

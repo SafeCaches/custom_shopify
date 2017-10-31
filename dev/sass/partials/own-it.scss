@@ -1,0 +1,104 @@
+@import '../variables';
+@import '../mixins';
+@import '../animations';
+
+#own-it {
+	header: 2% 0 0;
+	h2 {
+		padding: 0;
+	}
+	ul {
+		padding: 3% 0 0;
+		li {
+			margin: 0 0 1.5em;
+		}
+	}
+	.buy-learn {
+		text-align: left;
+		span.price.btn {
+		    color: white;
+		    background: black;
+		    border-color: black;
+		}
+	}
+	div.deck {
+		text-align: center;
+		// flex-basis: 80%;
+		img {
+			width: 65%;
+			margin: 0 auto;
+		}
+	}
+	// @include tablet {
+	// 	.row {
+	// 		flex-direction: column;
+	// 	}
+	//
+	// 	div.deck {
+	// 		img {
+	// 			border: 1px solid pink;
+	// 		}
+	// 		// flex: 150%;
+	// 		display: flex;
+	// 		justify-content: center;
+	// 		align-items: center;
+	// 	}
+	// }
+}
+
+// #own-it {
+// 	h2 {
+// 		padding: 3% 0;
+// 	}
+// 	.container {
+// 		> div:last-child {
+// 			flex: 0 0 70%;
+// 			padding: 0 0 0 5%;
+// 			@include tablet {
+// 				padding: 0;
+// 			}
+// 			ul li {
+// 				margin: 0 0 2em;
+// 				font-size: 1.15em;
+// 				&:before {
+// 					content: '*';
+// 					font-family: $violence;
+// 					display: inline-block;
+// 					font-size: 1.75em;
+// 					margin-left: -$space*1.5;
+// 					float: left;
+// 					position: relative;
+// 					top: 11px;
+// 					height: 0;
+// 				}
+// 			}
+// 		}
+// 		.price {
+// 			font-family: $baba;
+// 			font-size: 1.75em;
+// 			display: inline-block;
+// 			margin: 0 $space/2 0 0;
+// 		}
+// 		.buy-learn {
+// 			text-align: left;
+// 		}
+// 	}
+// 	@include tablet {
+// 		text-align: center;
+// 		.container {
+// 			div.deck {
+// 				margin: 0 0 2%;
+// 				img {
+// 					width: 50%;
+// 				}
+// 			}
+// 			> div:last-child {
+// 				ul li {
+// 					&:before {
+// 						content: '';
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

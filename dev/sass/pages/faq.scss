@@ -1,0 +1,64 @@
+@import '../variables';
+@import '../mixins';
+
+#faq {
+	header {
+		// position: fixed;
+		z-index: 100;
+		width: 100%;
+		background: white;
+		top: 1.5em;
+		padding: 1em 0 0;
+	}
+	.row {
+		flex-direction: column;
+		margin: 1em auto 0;
+		p {
+			margin: 0;
+		}
+	}
+	div.holder {
+		margin: 0 0 .25em;
+		div.q {
+			color: $purple;
+			text-align: center;
+			// font-size: 1.875em;
+			font-size: 1.5em;
+			line-height: 1.2em;
+			cursor: pointer;
+			padding: 5px;
+			p {
+				display: inline-block;
+				padding: 0 0 3px;
+				border-bottom: 2px solid transparent;
+				&:hover {
+					border-bottom: 2px solid $purple;
+				}
+			}
+			&.open p {
+				border-bottom: 2px solid $purple;
+			}
+		}
+		div.a {
+			font-size: 1.1em;
+			text-align: center;
+			line-height: 1.5em;
+			height: 0;
+			overflow: hidden;
+			margin: .25em 0 0;
+			transition: .5s all;
+			padding: 5px;
+		}
+		&.open {
+			background: #eee;
+			div.a {
+				height: auto;
+			}
+			margin-bottom: 15px;
+		}
+	}
+	a {
+		color: $purple;
+		font-weight: 700;
+	}
+}

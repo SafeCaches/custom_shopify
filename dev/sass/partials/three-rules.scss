@@ -1,0 +1,61 @@
+@import '../variables';
+@import '../mixins';
+
+#three-rules, #how-to-play {
+	padding: 4% 0 2%;
+	text-align: center;
+	@include mobile {
+		h5 {
+			font-size: 1.8em;
+			line-height: 24px;
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: 1.5em;
+		}
+
+	}
+	.row {
+		p {
+			margin: 0 0 1em;
+			min-height: 34px;
+		}
+	}
+	header {
+		padding: 0;
+		&:last-of-type h2 {
+			margin: .5em 0 0;
+		}
+		&:last-of-type ~ p {
+		    margin: 0 0 1em;
+		}
+	}
+	div {
+		padding: 0 2%;
+	}
+	div.card {
+		p {
+			@include mobile {
+				font-size: 12vh;
+			}
+			margin: 0;
+		}
+		&.green {
+			background: $green;
+		}
+		&.red {
+			background: $yellow;
+			color: $red;
+		}
+		&.dammit {
+			background: $blue;
+		}
+		&.orange {
+			background: $orange;
+		}
+		&.fuck {
+			background: $fuckcard;
+			color: $green;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+$space: 16px;
+
+//COLORS
+$black: #000000;
+$purple: #542579;
+$yellow: #FED003;
+$grey: #6C6C6C;
+$ltgrey: #848484;
+$green: #5BC500;
+$red: #D6001C;
+$blue: #009FDF;
+$orange: #FF7500;
+$fuckcard: #9223BB;
+$dkblue: #002855;
+$dkred: #A20000;
+$white: #FFFFFF;
+$ltpurple: #C964CF;
+
+//SOCIAL COLORS
+$fbBlue: #4867AA;
+$twitterBlue: #55ACEE;
+$pinterestRed: #CB2027;
+$googleBlue: #3A7CEC;
+$redditBlue: #CEE3F8;
+$stumbleuponRed: #EB4924;
+
+//FONTS
+$baba: 'bebas_neue_regularregular', Helevetica;
+$violence: 'violenceraw', Helevetica;
+
+
+//INSTAGRAM GRADIENT
+$instaGradient: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);

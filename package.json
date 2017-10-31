@@ -1,0 +1,34 @@
+{
+  "name": "custom_shopify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafeCaches/custom_shopify.git"
+  },
+  "keywords": [
+    "shopify",
+    "javascript",
+    "sass",
+    "gulp",
+    "theme-kit"
+  ],
+  "author": "Shawn Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SafeCaches/custom_shopify/issues"
+  },
+  "homepage": "https://github.com/SafeCaches/custom_shopify#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,0 +1,63 @@
+@import '../variables';
+@import '../mixins';
+
+
+#mindjobs-given {
+	position: relative;
+	#slider.row {
+		overflow: hidden;
+		div.slick-slide {
+			margin: .25%;
+		}
+	}
+	.slick-list {
+		margin: 0;
+		padding: 0;
+	}
+	.slider-holder {
+		position: relative;
+	}
+	.slider-nav {
+		position: absolute;
+		top: 41%;
+		width: 100%;
+		display: block;
+		text-align: center;
+		i {
+			padding: 10px;
+			font-size: 2.5em;
+			cursor: pointer;
+			color: $yellow;
+			transition: all .2s;
+			position: absolute;
+			&:first-of-type {
+				left: 4%;
+			}
+			&:last-of-type {
+				right: 4%;
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+	#quotes {
+		margin: 0 auto;
+		width: 35%;
+		text-align: center;
+		font-size: 1.5em;
+		line-height: 1.5em;
+		padding: 2% 0;
+		font-weight: 800;
+		blockquote.slick-slide p {
+			margin: 0;
+		}
+		footer {
+			font-weight: 300;
+			font-size: 1em;
+		}
+		@include small {
+			width: 80%;
+		}
+	}
+}

@@ -1,0 +1,195 @@
+@import '../variables';
+@import '../mixins';
+
+section#footer {
+	background: $black;
+	.row {
+		max-width: 1040px;
+	}
+	
+}
+
+footer {
+	color: white;
+	font-family: $baba;
+	letter-spacing: 1.34px;
+	//LOGO
+	.logo {
+		height: 4em;
+	}
+	#links {
+		padding: 0;
+	}
+	nav {
+		display: flex;
+		font-size: 1.25em;
+		ul {
+			flex: 1;
+			li {
+				margin: 0 0 .5em;
+			}
+		}
+	}
+	a {
+		transition: all .2s;
+		&:hover {
+			color: $yellow;
+		}
+	}
+	#social {
+		margin: -50px 0 0;
+		p {
+			margin: 0 0 .5em;
+			font-size: 1.25em;
+		}
+		#profiles {
+			margin: 0 0 2em;
+			ul {
+				display: flex;
+			    justify-content: space-between;
+				li {
+					margin: 0 1em 0 0;
+				    flex: 0 1 48px;
+					&:last-of-type {
+						margin: 0;
+					}
+				    img {
+				    	// width: 48px;
+				    }
+				}
+			}
+		}
+	}
+	@include tablet {
+		.row {
+			flex-direction: column;
+		}
+		#social {
+			margin: 1%;
+		}
+	}
+	@include mobile {
+		nav {
+			flex-direction: column;
+		}
+		#social #profiles {
+			ul li img {
+				width: 32px;
+			}
+		}
+		#subscribe form {
+		    flex-direction: column;
+		    input[type=email] {
+		    	margin: 0 0 1em;
+		    }
+		}
+	}
+}
+
+
+
+
+//COPYRIGHT
+p.copyright {
+	font-family: $baba;
+	text-align: center;
+	padding: 1em;
+	color: $grey;
+}
+
+// //STRUCTURE
+// footer {
+// 	background: $black;
+// 	color: white;
+// 	padding: 1% 0;
+// 	.container {
+// 		display: flex;
+// 		> * {
+// 			flex: 1;
+// 		}
+// 		@include tablet {
+// 			flex-direction: column;
+// 		}
+// 	}
+// }
+
+// //LOGO
+// .logo {
+// 	font-size: 4em;
+// 	line-height: 2em;
+// }
+
+// //LINKS
+// footer {
+// 	nav {
+// 		flex: 1;
+// 		font-size: 1.25em;
+// 		display: flex;
+// 		ul {
+// 			flex: 1;
+// 			font-family: $baba;
+// 			li {
+// 				line-height: 1.75em;
+// 				a {
+// 					font-weight: 300;
+// 				    letter-spacing: 1.34px;
+// 				    transition: all .2s;
+// 				    &:not(.buy-btn):hover, &.active {
+// 				    	color: $yellow;
+// 				    }
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// //SOCIAL
+// footer {
+// 	div#social {
+// 		flex: 1;
+// 		max-width: 500px;
+// 		#profiles {
+// 			ul {
+// 				display: flex;
+// 				justify-content: space-between;
+// 				li {
+// 					width: 30px;
+// 					height: 30px;
+// 					display: flex;
+// 					justify-content: center;
+// 					align-items: center;
+// 					font-size: 2em;
+// 					border-radius: 3px;
+// 					&.facebook:hover {
+// 						color: $fbBlue;
+// 					}
+// 					&.twitter:hover {
+// 						color: $twitterBlue;
+// 					}
+// 					&.instagram:hover {
+// 						background: $instaGradient;
+// 						border-radius: 5px;
+// 					}
+// 					&.pinterest:hover {
+// 						color: $pinterestRed;
+// 					}
+// 					&.google:hover {
+// 						color: $googleBlue;
+// 					}
+// 					&.reddit:hover {
+// 						color: $redditBlue;
+// 					}
+// 					&.stumbleupon:hover {
+// 						color: $stumbleuponRed;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	#subscribe {
+// 		margin: 1em 0 0;
+// 	}
+// }
+
+
+

@@ -1,0 +1,52 @@
+@import '../variables';
+@import '../mixins';
+
+#watch-this-space {
+	text-align: center;
+	.row {
+		flex-direction: column;
+	}
+	form {
+		width: 50%;
+		margin: 0 auto;
+	}
+	input[type='email']{
+		border: 1px solid #979797;
+	}
+	@include tablet {
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		input[type='email']{
+			margin: 0 0 1em 0 !important;
+		}
+		input[type='submit'] {
+			align-self: center;
+		}
+
+	}
+
+}
+
+// #watch-this-space {
+
+// 	#subscribe {
+// 		margin: 0 auto;
+// 		text-align: center;
+// 		h3 {
+// 			padding: 2% 0;
+// 		}
+// 		form {
+// 			width: 50%;
+// 			margin: 0 auto;
+// 			input[type='email']{
+// 				background: #efefef;
+// 			}
+// 			@include tablet {
+// 				width: 90%;
+// 			}
+// 		}
+// 	}
+// }

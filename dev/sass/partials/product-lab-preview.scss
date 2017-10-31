@@ -1,0 +1,38 @@
+@import '../variables';
+@import '../mixins';
+@import '../animations';
+
+#product-lab-preview {
+	.buy-learn {
+		padding: 0 0 1%;
+	}
+	ul ~ p {
+		margin: 2.5em 0 2em;
+	}
+	ul {
+		display: flex;
+		width: 50%;
+	    margin: 0 auto;
+	    flex-wrap: wrap;
+	    @include tablet {
+	    	flex-direction: column;
+	    }
+		li {
+			flex: 1 0 50%;
+			h5 {
+				text-align: left;
+				padding: 0 0 0 26%;
+			}
+		}
+		@include tablet {
+			width: 100%;
+			li {
+				flex: 1 1 100%;
+				h5 {
+					padding: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

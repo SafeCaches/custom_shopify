@@ -1,0 +1,25 @@
+@import '../variables';
+@import '../mixins';
+
+#subscribe {
+	form {
+		display: flex;
+		input[type="email"] {
+			flex: 2;
+			margin: 0 1em 0 0;
+		}
+		input[type="submit"] {
+			flex: 1;
+			&:hover {color: white;}
+		}
+		input {
+			padding: .5em .75em .475em;
+			color: $black;
+			font-family: 'bebas_neue_regularregular', Helvetica, sans-serif;
+			border: none;
+			letter-spacing: 1.34px;
+			font-size: 1.25em;
+			border-radius: 4px;
+		}
+	}
+}

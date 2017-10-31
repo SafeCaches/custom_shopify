@@ -1,0 +1,50 @@
+@import '../variables';
+@import '../mixins';
+
+#wall-of-shame {
+	header {
+		p {
+			text-align: center;
+			margin: 1em 0 1em;
+		}
+	}
+	.row {
+		width: 92%;
+		flex-direction: column;
+		overflow: scroll;
+	}
+	table {
+		border-collapse: collapse;
+		font-family: $baba;
+		font-size: 1.125em;
+	    letter-spacing: 1.21px;
+		tr.purple {
+			background: rgba(83,36,121,0.50);
+		}
+		tr.purple td, tr.buffer td, tr.header td {
+			border: none;
+		}
+		tr.header {
+			background: black;
+			color: white;
+			td.left-row {
+				border-radius: 6px 0 0 6px;
+			}
+			td.right-row {
+				border-radius: 0 6px 6px 0;
+			}
+		}
+		p {
+			font-family: 'Titillium Web';
+			letter-spacing: 0;
+		}
+		td {
+			padding: .5em;
+			vertical-align: top;
+			border: 1px solid #ddd;
+			&:last-of-type {
+			    text-align: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@import '../variables';
+@import '../mixins';
+
+#storefront {
+	header {
+		p {
+			text-align: center;
+			margin: 1em 0 1em;
+		}
+	}
+	.row {
+		width: 92%;
+		flex-direction: column;
+		overflow: scroll;
+	}
+	}

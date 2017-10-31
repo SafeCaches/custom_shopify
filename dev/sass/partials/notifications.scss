@@ -1,0 +1,23 @@
+@import '../variables';
+@import '../mixins';
+@import '../animations';
+
+#notifications {
+	background: $yellow;
+	color: $black;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	z-index: 1043;
+	top: 0;
+	h3 {
+		margin: 0;
+		line-height: 2em;
+	}
+	&.drop {
+		overflow: auto;
+		max-height: 20em;
+		padding: 32px;
+	}
+
+}

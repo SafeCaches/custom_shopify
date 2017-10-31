@@ -1,0 +1,301 @@
+@import '../variables';
+@import '../mixins';
+
+#optional-rules .back, #top-submissions .back, #drinking-rules .back {
+	p {
+	    line-height: 1.2em;
+	    display: flex;
+	    padding: 0.7em;
+	}
+	/* MIN FONT SIZE */
+	@media (min-width: 435px) {
+		p {
+			font-size: 1.2vw;
+			// border: 1px dotted gray;
+		}
+	}
+
+	@media (max-width: 1025px) {
+		p {
+			font-size: 1.5vw;
+			// border: 1px solid green;
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		p {
+			font-size: 2.15vw;
+			// border: 1px solid blue;
+			span {
+
+			}
+		}
+
+
+	}
+
+	@media (max-width: 435px) {
+		p {
+			// border: 1px solid pink;
+			font-size: 5vw;
+		}
+	}
+
+	/* MAX FONT SIZE */
+	@include large {
+		p {
+			font-size: 1em;
+		}
+	}
+}
+
+#optional-rules, #top-submissions, #drinking-rules {
+	.row {
+		// flex-wrap: wrap;
+		// justify-content: flex-start;
+		display: block;
+		overflow: hidden;
+	}
+	.holder {
+		margin: 1%;
+	    padding-bottom: 31.939%;
+	    float: left;
+	    width: 23%;
+		position: relative;
+		perspective: 800px;
+		cursor: pointer;
+		@include small {
+			width: 31.3333333%;
+			padding: 0 0 43.511096818%;
+		}
+		@include tablet {
+			width: 48%;
+			padding: 0 0 66.655304344%;
+		}
+
+		@include mobile {
+			width: 98%;
+		    padding: 0px 0 136.08791304%;
+		}
+	}
+
+	.card-vert {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		transform-style: preserve-3d;
+		transition: transform 1s;
+		transform-origin: right center;
+		text-align: center;
+	}
+
+	.card-vert figure, .card-vert div:not(.g-recaptcha) {
+		margin: 0;
+		padding: 0 2%;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+	}
+
+	.card-vert .front {
+		border-radius: 18px;
+		border: 0px solid $dkblue;
+		background: $dkblue;
+		color: white;
+		transform-origin: right center;
+		justify-content: center;
+		align-items: center;
+	}
+	.card-vert .back {
+		border-radius: 18px;
+		border: 2px solid $dkblue;
+		background: white;
+		color: $black !important;
+		transform: rotateY( 180deg );
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+		span.back-words {
+			p {
+				text-align: justify;
+				// font-size: 0.9em;
+			}
+			flex: 1;
+			// max-height: 70%;
+		}
+
+		svg, svg path {
+			flex: 1;
+			margin-top: 0;
+			fill: $dkblue !important;
+			polygon {
+				fill: inherit !important;
+			}
+		}
+		h3 {
+			margin: 0 0 .25m;
+		}
+	}
+
+	.card-vert.flipped {
+		transform: translateX( -100% ) rotateY( -180deg );
+	}
+
+	svg {
+		// border: 1px solid white;
+		flex: 2;
+		height: 30%;
+		// min-height: 90px;
+		// max-height: 180px;
+		fill: $white;
+		justify-content: center;
+		align-items: flex-end;
+	    margin-top: 30%;
+	    path {
+	    	fill: $white !important;
+	    }
+	}
+	h3 {
+		margin-top: 15px;
+		font-size: 1.6em;
+		line-height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex: 1.5;
+		// border: 1px solid white;
+	}
+
+	.holder.submit-your-own {
+		// flex: 0 1 18vw;
+		.card-vert .front {
+			color: $white;
+			font-size: 3em;
+			padding: 5%;
+			line-height: 1em;
+			a {
+				width: 100%;
+			    padding: 5%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+		.card-vert .back {
+			display: block;
+			padding: 5% 0;
+		}
+	}
+}
+
+#too-easy {
+	text-align: center;
+	.buy-learn {
+		display: flex;
+		justify-content: center;
+		width: 50%;
+		margin: -1em auto 2.5em;
+		@include tablet {
+			flex-direction: column;
+			width: 80%;
+		}
+		a {
+			background: $dkred;
+			border: 2px solid $dkred;
+			color: white;
+		    margin: 5px;
+		    &:first-of-type {
+		    	background: white;
+		    	color: $dkred;
+		    }
+		}
+	}
+	h3 {
+		margin: 0 0 2em;
+		color: $white;
+	}
+}
+
+#age-gate {
+	text-align: center;
+	input {
+		border: 2px solid red;
+		padding: 5px;
+		border-radius: 3px;
+		text-align: center;
+		font-family: inherit;
+	}
+	a {
+		background: $dkred;
+		border: 2px solid $dkred;
+		color: white;
+	    margin: 2em 5px;
+	    &:first-of-type {
+	    	background: white;
+	    	color: $dkred;
+	    }
+	}
+}
+
+.age-gate-disclaimer {
+  text-align: justify;
+  padding: 2% 0 1%;
+  p, li {
+  font-size: .8em;
+  margin: .5em 0;
+  }
+}
+
+
+#top-submissions {
+	div.row {
+		.holder {
+			figure {
+				border: 3px solid $grey;
+			}
+			.card-vert .front {
+				background: white;
+				color: $black;
+				svg, svg path {
+					fill: $purple !important;
+					polygon {
+						fill: inherit !important;
+					}
+				}
+			}
+			.card-vert .back {
+				display: flex;
+				border-radius: 18px;
+				border: 2px solid black;
+				background: white;
+				color: $black !important;
+				transform: rotateY( 180deg );
+				justify-content: flex-start;
+				text-align: justify;
+			svg {
+				flex: 1;
+				height: 70px;
+			}
+			svg, svg path {
+				fill: $purple !important;
+				polygon {
+					fill: inherit !important;
+				}
+			}
+			h3 {
+				margin: 0 0 .25em;
+				}
+			}
+		}
+	}
+}

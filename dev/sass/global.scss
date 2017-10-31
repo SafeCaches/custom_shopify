@@ -1,0 +1,292 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+.shopify-preview-bar {
+	display: none;
+}
+
+html {
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	margin: 90px 0 0;
+	@include small {
+		font-size: 90%;
+	}
+	@include tablet {
+		font-size: 85%;
+	}
+}
+
+body {
+	font-weight: 400;
+	font-family: 'Titillium Web', Helvetica Neus, Arial, sans-serif;
+	line-height: 1.25em;
+}
+
+#ip-check {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: white;
+	display: flex;
+	// display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 1s transform;
+	img {
+		width: 15%;
+		animation: pulse .7s;
+		animation-iteration-count: 50;
+	}
+	&.explode {
+		transform: scale(1000);
+	}
+
+}
+
+//MASTER SECTION LAYOUT
+section {
+	padding: 2.5em 0;
+	&.dark {color: white;}
+	header {
+		background: transparent;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1%;
+	    text-align: center;
+		h2 {
+			line-height: 1em;
+			padding: 0 0 .5em;
+			font-size: 4.15em;
+			text-transform: uppercase;
+			@include mobile {
+				font-size: 3.75em;
+			}
+		}
+	}
+	.row {
+		width: 82%;
+		// max-width: 1152px;
+		margin: 0 auto;
+		padding: 0 1% 1%;
+		display: flex;
+		justify-content: center;
+		> div {
+			// flex-basis: 100%;
+			flex: 1 1;
+			margin: 0 1% 1%;
+			padding: 1%;
+			// background: rgba(0,255,0,.5);
+			&.third {
+				flex: 0 1 31.333333333%;
+			}
+			&.two-box {
+				flex-basis: 200%;
+			}
+			&:nth-of-type(odd) {
+				// background: #FD0;
+			}
+			img {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+		p {
+			margin: 0 0 1.5em;
+		}
+		@include mobile {
+			flex-direction: column;
+			> div {
+				&.third, &.two-box {
+					flex: 1 1;
+				}
+			}
+		}
+	}
+}
+
+
+h1, h2 {
+	font-family: $violence;
+	letter-spacing: 5px;
+}
+
+h3 {
+	font-family: $baba;
+	letter-spacing: 1.34px;
+	font-size: 1.5em;
+}
+
+h5 {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+
+i {
+	font-style: italic;
+}
+
+.logo {
+	background-repeat: no-repeat;
+	flex: 1;
+    background-position: left center;
+	margin: .85em 0;
+    padding: 2em;
+	position: relative;
+	a {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+.btn {
+	font-size: 1.25em;
+	font-family: $baba;
+	color: $black;
+	background: $yellow;
+	min-width: 148px;
+    padding: 0.45em; //.805em
+    text-align: center;
+    border-radius: 4px;
+    border: .15em solid $yellow;
+    display: inline-block;
+    letter-spacing: 1.34px;
+    transition: .2s all;
+    &:hover {
+    	background: $purple;
+    	color: white;
+    	border: .15em solid $purple;
+    }
+}
+
+.buy-btn {
+	background: $yellow;
+	transition: .2s all;
+	&:hover {
+		background: $purple;
+		color: white;
+		border: .15em solid $purple;
+	}
+}
+
+.sold-out {
+	background: $grey;
+	cursor: not-allowed;
+	color: white;
+	border: .15em solid $grey;
+	&:hover {
+		background: $grey;
+		color: white;
+		border: .15em solid $grey;
+	}
+}
+
+.learn-btn {
+	background: none;
+	border: .15em solid $yellow;
+	transition: .2s all;
+	&:hover {
+		background: white;
+		border: .15em solid $purple;
+		color: $purple;
+	}
+}
+
+.price {
+	font-family: $baba;
+	font-size: 1.25em;
+	display: inline-block;
+	margin: 0 $space/2 0 0;
+}
+
+//MODAL
+.modal {
+	position: relative;
+	background: #FFF;
+	padding: 20px;
+	width: auto;
+	max-width: 500px;
+	margin: 20px auto;
+	h1 {
+
+	}
+}
+
+#submit, #fess-up, #suggest-a-word, #contact {
+	header {
+		margin: 0 0 1em;
+		h2 {
+			padding: 0 0 .25em;
+		}
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		font-family: $baba;
+		div.form-row {
+			display: flex;
+			input {
+				flex: 0 1 100%;
+				width: 0;
+				margin-left: 1em;
+				&:first-of-type {
+					margin-left: 0;
+				}
+			}
+		}
+		input, textarea, p.dropdown {
+			display: block;
+			font-family: inherit;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 1.5em;
+			margin: 0 0 1em 0;
+			padding: .5em;
+		}
+		input[type=submit] {
+			margin: 1em 0 0;
+			align-self: flex-start !important;
+		}
+	}
+	.g-recaptcha {
+		margin: 0 !important;
+		display: flex;
+		align-self: flex-start;
+	}
+}
+
+
+//CARD
+div.card {
+	text-align: center;
+	background: red;
+	border-radius: 18px;
+	margin: 0 0 1em;
+	color: $black;
+	p {
+		font-family: 'browallia', Helvetica Neue, Arial, sans-serif;
+		margin: 0;
+		line-height: 0;
+		position: relative;
+		padding: 32.1455% 0;
+		font-size: 6.25vw;
+		text-transform: uppercase;
+		position: relative;
+		top: -2px;
+		@include mobile {
+			font-size: 10vh;
+		}
+	}
+}

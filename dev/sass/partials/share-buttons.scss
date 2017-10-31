@@ -1,0 +1,65 @@
+@import '../variables';
+@import '../mixins';
+@import '../animations';
+
+.share-buttons {
+	margin: 1em 0 0;
+	> * {
+		display: inline-block;
+	}
+	span, a img {
+	    height: 26px;
+	    width: 52px;
+	}
+	a img.social-icon {
+		width: 63.5px;
+	}
+}
+
+// .share-buttons {
+// 	// text-align: center;
+// 	margin: 24px 0 0;
+// 	a.share-btn {
+// 		transition: color .05s;
+// 		i {
+// 			font-size: 1.15em;
+// 			padding: 7px 12px 4px !important;
+// 			margin: 0 8px 0 0 !important;
+// 			border: 1px solid #efefef;
+// 			border-radius: 3px;
+// 			background: #f7f7f7;
+// 			line-height: 1em !important;
+// 			transition: all .1s;
+// 		}
+		
+// 		&.facebook-share {
+// 			color: #49659D;
+// 			&:hover i {
+// 				background: #49659D;
+// 				border: 1px solid #49659D;
+// 			}
+// 		}
+// 		&.twitter-share {
+// 			color: #09AEEC;
+// 			&:hover i {
+// 				background: #09AEEC;
+// 				border: 1px solid #09AEEC;
+// 			}
+// 		}
+// 		&.pinterest-share {
+// 			color: #CB1F2A;
+// 			&:hover i {
+// 				background: #CB1F2A;
+// 				border: 1px solid #CB1F2A;
+// 			}
+// 		}
+// 		&:hover {
+// 			color: white !important;
+// 			i {
+// 				background: lightblue;
+// 				border: 1px solid lightblue;
+// 			}
+// 		}
+// 	}
+// }
+

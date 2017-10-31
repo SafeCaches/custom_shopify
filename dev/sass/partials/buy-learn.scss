@@ -1,0 +1,14 @@
+@import '../variables';
+@import '../mixins';
+
+.buy-learn {
+	text-align: center;
+	padding: 2% 0 1%;
+	
+	.btn {
+		margin: 1% 0;
+	}
+	p, li {
+		margin: .5em 0;
+	}
+}

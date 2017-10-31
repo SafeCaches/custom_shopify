@@ -1,0 +1,114 @@
+@import '../variables';
+@import '../mixins';
+
+#product-lab {
+	.row {
+		width: 92%;
+		div.intl-box {
+			text-align: center;
+			img {
+			    border-radius: 6px;
+			}
+			h4 {
+				font-weight: 700;
+			}
+			p, h4 {
+				font-size: 1.1em;
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+#customize-your-plan {
+	.row {
+		width: 65%;
+		text-align: justify;
+		div {
+			flex: 1;
+		}
+		@include tablet {
+			width: 80%;
+		}
+		div.two-box {
+			flex: 1.5;
+			display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		}
+		h3 {
+			margin: 0 0 1rem;
+		}
+		&:last-of-type .two-box {
+			@include mobile {
+				order: 1;
+			}
+		}
+	}
+}
+
+#suggest-a-word {
+	background: url(#{'{{ "product-lab-suggest-bg.jpg" | asset_url }}'}) no-repeat center;
+	background-size: cover;
+	.row {
+		width: 72%;
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+	input[type="submit"] {
+		margin: 1em 0 0;
+		align-self: flex-start !important;
+	}
+	.g-recaptcha {
+		margin: 0 !important;
+		display: flex;
+		align-self: flex-start;
+	}
+	div.card {
+		background: $blue;
+		color: $black;
+		@include tablet {
+			max-width: 80%;
+		}
+		p {
+			font-size: 7.25em;
+			@include tablet {
+				font-size: 16vw;
+			}
+			@include mobile {
+				font-size: 17vw;
+			}
+		}
+	}
+}
+
+/*
+#limited-editions {
+	text-align: center;
+	img {
+		margin: 0 0 1em;
+	}
+}
+
+#oos {
+	text-align: center;
+	font-family: $baba;
+	h3 {
+		margin: 0 0 1em;
+	}
+	input[type=email] {
+		display: inline-block;
+		font-family: inherit;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 1.25em;
+		margin: 0 1em 0 0;
+		padding: .55em;
+		letter-spacing: 1.34px;
+	}
+	input[type=submit] {
+		border-radius: 3px;
+	}
+}
+*/

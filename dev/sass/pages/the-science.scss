@@ -1,0 +1,141 @@
+@import '../variables';
+@import '../mixins';
+
+#the-science {
+	.row {
+		margin: 2.5% auto;
+		div {
+			width: 100%;
+			padding: 0;
+			em {
+				font-weight: 700;
+			}
+			figure {
+				width: 100%;
+				text-align: center;
+				img {
+					width: 100%;
+				}
+			}
+			figcaption {
+				font-size: .9em;
+				color: #aaa;
+			}
+		}
+		&:nth-of-type(odd) {
+			.left {
+				flex: 1.75;
+				@include mobile {
+					padding: 0;
+				}
+			}
+			.right {
+				@include mobile {
+					padding: 0;
+				}
+				flex: 1;
+				padding: 0 0 0 5%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				h3 {
+					font-size: 4em;
+				    line-height: 1em;
+				    text-align: left;
+				}
+			}
+		}
+		&:nth-of-type(even) {
+			.left {
+				@include mobile {
+					padding: 0;
+				}
+				flex: 1;
+				padding: 0 5% 0 0;
+				text-align: center;
+			}
+			.right {
+				@include mobile {
+					padding: 0;
+				}
+				flex: 1.5;
+			}
+		}
+		img {
+
+		}
+	}
+	h3 {
+		font-size: 2em;
+		line-height: 1em;
+		margin: 0.5em 0 0.5em;
+	}
+	p {
+		line-height: 1.5em;
+		margin: 0 0 .75em;
+		text-align: justify;
+	}
+	ul {
+		margin: 2em 0 0;
+		li {
+			display: flex;
+			justify-content: space-between;
+			h3 {
+				display: inline-block;
+			}
+			&:nth-of-type(1) {
+				h3:nth-of-type(1) {
+					color: #D6001C;
+				}
+				h3:nth-of-type(2) {
+					color: #5FC706;
+				}
+				h3:nth-of-type(3) {
+					color: #9223BB;
+				}
+				h3:nth-of-type(4) {
+					color: #009FDF;
+				}
+				h3:nth-of-type(5) {
+					color: #FED004;
+				}
+
+			}
+			&:nth-of-type(2) {
+				h3:nth-of-type(1) {
+					color: #009FDF;
+				}
+				h3:nth-of-type(2) {
+					color: #9223BB;
+				}
+				h3:nth-of-type(3) {
+					color: #D6001C;
+				}
+				h3:nth-of-type(4) {
+					color: #FED004;
+				}
+				h3:nth-of-type(5) {
+					color: #5FC706;
+				}
+
+			}
+		}
+	}
+	div.card {
+		background: $green;
+		color: $red;
+		p {
+			text-align: center;
+			line-height: 0;
+			@include mobile {
+				font-size: 6em;
+			}
+			// @include tablet {
+			// 	font-size: 1.5vw;
+			// }
+			font-size: 7.5vw;
+			margin: 0;
+		}
+	}
+}
